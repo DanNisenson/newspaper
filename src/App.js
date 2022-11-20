@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Main from './components/Main';
+import React, { useState } from 'react'
+
 
 function App() {
+  const [category, setCategory] = useState('general');
+
+  const updateCategory = (newCategory) => {
+    console.log(newCategory)
+    setCategory(newCategory);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Header updateCategory={updateCategory} />
+     <Main category={category} />
     </div>
   );
 }
 
 export default App;
+
+// https://newsapi.org/
+//  v2/everything?
+//  v2/top-headlines?
+// &apiKey=5478f91e35d843b48c4c219e441a01cd

@@ -1,28 +1,39 @@
-import './App.css';
-import Header from './components/Header';
-import Main from './components/Main';
-import React, { useState } from 'react'
-
+import "./App.css";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import React, { useState } from "react";
 
 function App() {
-  const [category, setCategory] = useState('general');
+  const [category, setCategory] = useState("general");
+  const [selectedCountry, setSelectedCountry] = useState("ar");
+  const [searchInput, setSearchInput] = useState("");
 
-  const updateCategory = (newCategory) => {
-    console.log(newCategory)
+  /* const updateCategory = (newCategory) => {
     setCategory(newCategory);
+  }; */
+
+  const changeCountry = (country) => {
+    setSelectedCountry(country);
+  };
+
+  const searchEverything = (input) => {
+    setSearchInput(input)
   }
 
   return (
     <div className="App">
-     <Header updateCategory={updateCategory} />
-     <Main category={category} />
+      <Header
+        setCategory={setCategory}
+        selectedCountry={selectedCountry}
+        changeCountry={changeCountry}
+        searchEverything={searchEverything}
+      />
+      <Main category={category} selectedCountry={selectedCountry} searchInput={searchInput} />
     </div>
   );
 }
 
 export default App;
 
-// https://newsapi.org/
-//  v2/everything?
-//  v2/top-headlines?
-// &apiKey=5478f91e35d843b48c4c219e441a01cd
+// !!! 
+// Is passing set function directly as props OK ???

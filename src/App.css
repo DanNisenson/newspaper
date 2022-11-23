@@ -37,10 +37,6 @@ picture {
   display: block;
 }
 
-div {
-  display: inherit;
-}
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -68,7 +64,7 @@ select {
 /* ------------------------------------------------------------------------ */
 
 .App {
-  width: 100vw;
+  min-width: 320px;
   display: flex;
   flex-direction: column;
 }

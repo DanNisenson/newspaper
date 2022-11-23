@@ -1,0 +1,62 @@
+/* parent container */
+.sections-container-parent {
+  position: sticky;
+  top: 62px;
+}
+
+/* set vertical padding and scroll */
+.sections-container {
+  padding: 1rem 0;
+  overflow-x: scroll;
+  background-color: white;
+  z-index: 10;
+}
+
+/* double line border. placed in ::after in order to be narrower than container */
+.sections-container::after {
+  content: "";
+  position: absolute;
+  left: 1.3rem;
+  right: 1.3rem;
+  top: 0;
+  bottom: -4px;
+  /* width: 100%; */
+  border-bottom: 4px double gray;
+  z-index: -1;
+}
+
+/* hide scrollbar */
+.sections-container::-webkit-scrollbar { 
+  display: none;  
+}
+
+/* gradient to indicate scrolling option */
+.sections-container-parent::after {
+  content: '';
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  top: 0;
+  width: 24px;
+  z-index: 99;
+  background: linear-gradient(90deg,transparent,var(--color-background-elevated,#FFFFFF));
+}
+
+/* links flex container */
+.sections {
+  display: flex;
+  align-items: center;
+  /* gap: 1.5rem; */
+  font-weight: 700;
+}
+
+/* links to sections */
+.category {
+  padding: 0 0.7rem;
+  cursor: pointer;
+}
+
+
+
+

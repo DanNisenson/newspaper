@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+
+.header {
+  position: sticky;
+  top:0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: white;
+  border-bottom: 1px solid gainsboro;
+  z-index: 1;
+}
+
+.logo {
+  font-family: "Berkshire Swash", "Times New Roman", Times, serif;
+  font-size: 1.8em;
+}
+
+.search-bar {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  bottom: 0;
+  width: 0;   /* hidden */
+  border: none;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: all cubic-bezier(0.18, 0.89, 0.32, 1) .8s;
+}
+
+.search-bar-active {
+  width: 80%;
+}
+/* get rid of focus styling */
+.search-bar:focus {
+  outline: none;
+  border-bottom: 1px solid rgb(223, 66, 66);
+}
+
+.search-icon {
+  display: block;
+  width: 10px;
+  max-width: 10px;
+  height: 10px;
+}
+
+/* date display and subscription bar */
+.date-susc {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
+  font-size: 0.8em;
+  border-bottom: 1px solid gainsboro;
+  background-color: rgb(245, 245, 245);
+}
+
+/* maybe do this in the future */
+.latest {
+  display: none;
+  height: 60px;
+  border-bottom: 1px solid gray;
+}

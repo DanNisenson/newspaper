@@ -5,7 +5,7 @@
 
 .art-main {
     display: block;
-    margin: 0 1.5rem 0;
+    margin: 0 1.3rem 0;
     padding: 1rem 0 1.2rem 0;
     border-bottom: 1px solid gainsboro;
 }
@@ -38,4 +38,16 @@
 .time {
     font-size: .7rem;
     color: rgb(223, 66, 66);
+}
+
+.main-no-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-results-title {
+    font-family: 'Noto Serif Oriya' ,georgia, "times new roman", times, serif;
+    padding: 2rem;
+    text-align: center;
 }

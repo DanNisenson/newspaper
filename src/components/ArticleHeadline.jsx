@@ -19,6 +19,7 @@ const ArticleHeadline = (props) => {
   }, []);
 
   return (
+    // on click forwards to original article
     <div className="art-main" onClick={() => window.open(props.url)}>
       <p className="time">{time}</p>
       <h3 className="art-main-title">{props.title}</h3>
